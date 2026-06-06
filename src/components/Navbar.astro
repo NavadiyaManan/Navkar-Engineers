@@ -1,0 +1,149 @@
+---
+// Navbar.astro
+---
+<header class="sticky top-0 z-50 w-full bg-brand-charcoal/90 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      
+      <!-- Logo Section -->
+      <a href="/" class="flex items-center focus:outline-none" aria-label="Navkar Engineers Home">
+        <img 
+          src="/images/logo.png" 
+          alt="Navkar Engineers Logo" 
+          class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 hover:scale-105" 
+        />
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center space-x-8" aria-label="Desktop Navigation">
+        <a href="#home" class="nav-link text-white font-display text-sm font-medium tracking-wide uppercase hover:text-brand-gold transition-colors duration-300 relative py-2">Home</a>
+        <a href="#about" class="nav-link text-brand-light/85 font-display text-sm font-medium tracking-wide uppercase hover:text-brand-gold transition-colors duration-300 relative py-2">About Us</a>
+        <a href="#products" class="nav-link text-brand-light/85 font-display text-sm font-medium tracking-wide uppercase hover:text-brand-gold transition-colors duration-300 relative py-2">Products</a>
+        <a href="#certifications" class="nav-link text-brand-light/85 font-display text-sm font-medium tracking-wide uppercase hover:text-brand-gold transition-colors duration-300 relative py-2">Certifications</a>
+        <a href="#contact" class="nav-link text-brand-light/85 font-display text-sm font-medium tracking-wide uppercase hover:text-brand-gold transition-colors duration-300 relative py-2">Contact</a>
+      </nav>
+
+      <!-- CTA Button Desktop -->
+      <div class="hidden lg:flex items-center">
+        <a 
+          href="#contact" 
+          class="btn-chevron-hover relative inline-flex items-center justify-center px-5 py-2.5 bg-transparent border border-brand-gold/45 text-brand-gold hover:text-brand-dark hover:bg-brand-gold font-display text-xs font-semibold tracking-widest uppercase transition-all duration-300 focus:outline-none"
+        >
+          <span>Get In Touch</span>
+          <span class="chevron-icon ml-1 text-sm font-bold">&gt;&gt;</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button (Hamburger) -->
+      <div class="flex md:hidden">
+        <button 
+          id="mobile-menu-toggle" 
+          type="button" 
+          class="inline-flex items-center justify-center p-2 rounded-md text-brand-light hover:text-brand-gold hover:bg-white/5 focus:outline-none transition-colors duration-300"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6 block" id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="h-6 w-6 hidden" id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <div 
+    id="mobile-menu" 
+    class="hidden md:hidden absolute top-20 left-0 w-full bg-brand-charcoal border-b border-white/5 shadow-2xl transition-all duration-300 ease-in-out z-40"
+  >
+    <div class="px-4 pt-2 pb-6 space-y-3 sm:px-6">
+      <a href="#home" class="mobile-nav-link block px-3 py-2.5 text-base font-semibold text-white uppercase tracking-wider hover:bg-white/5 hover:text-brand-gold transition-all rounded">Home</a>
+      <a href="#about" class="mobile-nav-link block px-3 py-2.5 text-base font-semibold text-brand-light/85 uppercase tracking-wider hover:bg-white/5 hover:text-brand-gold transition-all rounded">About Us</a>
+      <a href="#products" class="mobile-nav-link block px-3 py-2.5 text-base font-semibold text-brand-light/85 uppercase tracking-wider hover:bg-white/5 hover:text-brand-gold transition-all rounded">Products</a>
+      <a href="#certifications" class="mobile-nav-link block px-3 py-2.5 text-base font-semibold text-brand-light/85 uppercase tracking-wider hover:bg-white/5 hover:text-brand-gold transition-all rounded">Certifications</a>
+      <a href="#contact" class="mobile-nav-link block px-3 py-2.5 text-base font-semibold text-brand-light/85 uppercase tracking-wider hover:bg-white/5 hover:text-brand-gold transition-all rounded">Contact</a>
+      <div class="pt-4 px-3">
+        <a 
+          href="#contact" 
+          class="w-full inline-flex items-center justify-center py-3 bg-brand-gold text-brand-dark font-display text-sm font-bold tracking-wider uppercase transition-colors hover:bg-brand-gold-light focus:outline-none"
+        >
+          Request a Quote
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* Custom line transition for active menu items on desktop */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-brand-gold);
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+  }
+</style>
+
+<script>
+  // Navbar toggle script
+  const setupNavbar = () => {
+    const toggleButton = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeIcon = document.getElementById('menu-icon-close');
+    const openIcon = document.getElementById('menu-icon-open');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (toggleButton && mobileMenu && closeIcon && openIcon) {
+      const toggleMenu = () => {
+        const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+        toggleButton.setAttribute('aria-expanded', (!isExpanded).toString());
+        
+        mobileMenu.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+        openIcon.classList.toggle('hidden');
+      };
+
+      toggleButton.addEventListener('click', toggleMenu);
+
+      // Close menu when a link is clicked
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (!mobileMenu.classList.contains('hidden')) {
+            toggleMenu();
+          }
+        });
+      });
+    }
+
+    // Scroll styling: add border/background shadow on scroll
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (header) {
+        if (window.scrollY > 20) {
+          header.classList.add('shadow-xl', 'bg-brand-dark/95');
+          header.classList.remove('bg-brand-charcoal/90');
+        } else {
+          header.classList.remove('shadow-xl', 'bg-brand-dark/95');
+          header.classList.add('bg-brand-charcoal/90');
+        }
+      }
+    });
+  };
+
+  // Run on page load and astro page loads (if using transitions)
+  setupNavbar();
+  document.addEventListener('astro:after-swap', setupNavbar);
+</script>

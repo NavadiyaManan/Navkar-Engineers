@@ -1,0 +1,52 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Navkar Engineers | Premium Elevator Components",
+  description = "Navkar Engineers manufactures premium, high-end elevator components including Elevator Push Buttons, Landing Operating Panels (L.O.P.), and Car Operating Panels (C.O.P.) for global markets."
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" 
+      rel="stylesheet" 
+    />
+  </head>
+  <body class="bg-brand-dark text-brand-light font-sans selection:bg-brand-gold selection:text-brand-dark antialiased">
+    <div class="relative min-h-screen flex flex-col justify-between overflow-x-hidden bg-grid-pattern">
+      <!-- Glow effects in background -->
+      <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-gold/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-brand-gold/5 rounded-full blur-[150px] pointer-events-none -z-10"></div>
+      
+      <slot />
+    </div>
+  </body>
+</html>

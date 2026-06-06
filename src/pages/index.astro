@@ -1,0 +1,42 @@
+---
+// index.astro
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import ValueProposition from '../components/ValueProposition.astro';
+import ProductShowcase from '../components/ProductShowcase.astro';
+import Certifications from '../components/Certifications.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Navkar Engineers | Premium Elevator Push Buttons, LOP & COP Manufacturers" 
+  description="Navkar Engineers manufactures high-end, custom elevator components (Tactile Buttons, Landing Operating Panels, Car Operating Panels) meeting global EN 81 regulations and ISO standards."
+>
+  <!-- Global Header / Sticky Navigation -->
+  <Navbar />
+
+  <!-- Main Content Structure -->
+  <main>
+    <!-- Hero Section -->
+    <Hero />
+
+    <!-- Sharp chevron divider transition (facing down) -->
+    <div class="chevron-divider-top"></div>
+
+    <!-- Value Proposition capabilities -->
+    <ValueProposition />
+
+    <!-- Sharp chevron divider transition (facing up/down) -->
+    <div class="chevron-divider"></div>
+
+    <!-- Product Showcase catalog grid -->
+    <ProductShowcase />
+
+    <!-- Compliance & Certifications bar -->
+    <Certifications />
+  </main>
+
+  <!-- Global Footer with RFQ Form -->
+  <Footer />
+</Layout>
