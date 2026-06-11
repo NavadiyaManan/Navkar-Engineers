@@ -6,94 +6,88 @@ import Footer from '../components/Footer.astro';
 
 const clients = [
   {
-    name: "Epic Elevators",
-    lettermark: "EPIC",
-    tag: "Tactile Button Partner",
-    location: "National Developer"
+    id: "epic",
+    name: "Epic Elevators Pvt. Ltd.",
+    url: "https://www.epicelevators.com",
+    location: "Ahmedabad, Gujarat",
+    desc: "Leading manufacturer specializing in advanced two-way belt-drive machine-room-less (MRL) technology and highly customized vertical transportation systems."
   },
   {
-    name: "Techno Industries Pvt Ltd",
-    lettermark: "TECHNO",
-    tag: "Custom Operating Panels",
-    location: "Gujarat, India"
+    id: "techno",
+    name: "Techno Industries Pvt. Ltd.",
+    url: "https://technoelevators.com",
+    location: "Ahmedabad, Gujarat",
+    desc: "A premier manufacturing group with over 21,000 installations, engineering heavy-duty industrial freight lifts and non-standard custom elevators."
   },
   {
+    id: "sigma",
     name: "Sigma Elevators",
-    lettermark: "SIGMA",
-    tag: "High-Rise Interfaces",
-    location: "Mumbai, India"
+    url: "https://www.sigmaelevator.com",
+    location: "New Delhi / Pan-India",
+    desc: "High-speed commercial lift providers, focus areas include premium passenger capsules and automated residential vertical transit infrastructures."
   },
   {
-    name: "S.H. Elevators Pvt Ltd",
-    lettermark: "S.H.",
-    tag: "OEM Component Supply",
-    location: "New Delhi, India"
+    id: "shelevators",
+    name: "S H Elevators Pvt. Ltd.",
+    url: "#",
+    location: "Ahmedabad, Gujarat",
+    desc: "Engineering specialists delivering comprehensive structural elevator installations, modernizations, and precise custom engineering fabrication."
   },
   {
-    name: "Fuzi Elevators",
-    lettermark: "FUZI",
-    tag: "Panel Assembly Network",
-    location: "International Partner"
+    id: "fuzi",
+    name: "FUZI Classic Elevators Pvt. Ltd.",
+    url: "https://fuzielevators.com",
+    location: "Jaipur, Rajasthan",
+    desc: "An ISO 9001 and 14001 certified manufacturer designing custom residential home lifts, medical stretchers, and mechanical parking systems."
   },
   {
+    id: "hybon",
     name: "Hybon Elevators & Escalators",
-    lettermark: "HYBON",
-    tag: "Premium Fixtures Deployment",
-    location: "North India Hub"
+    url: "https://www.hybonelevators.com",
+    location: "New Delhi, India",
+    desc: "A dominant engineering brand with 6,000+ installations certified by the Lift Institute Netherlands for safety compliance against international EN standards."
   },
   {
+    id: "safex",
     name: "Safex Industries Limited",
-    lettermark: "SAFEX",
-    tag: "Heavy-Duty Tactile Panels",
-    location: "Industrial Infrastructure"
+    url: "https://www.safexcranes.com",
+    location: "Ahmedabad, Gujarat",
+    desc: "Heavy engineering industrial group specializing in high-capacity wire rope hoists, material handling systems, and specialized industrial cranes."
   },
   {
-    name: "CIE Elevators",
-    lettermark: "CIE",
-    tag: "Custom Glass COP Panels",
-    location: "South India Network"
+    id: "beacon",
+    name: "Beacon Elevators Pvt. Ltd.",
+    url: "http://www.beaconelevators.com",
+    location: "New Delhi, India",
+    desc: "Certified vertical transit infrastructure designers executing modern traction solutions and automated architectural capsule systems."
   },
   {
-    name: "Beacon Elevators",
-    lettermark: "BEACON",
-    tag: "Tactile Button Deployment",
-    location: "Metro Transit Projects"
-  },
-  {
-    name: "Fuzi Classic Elevators",
-    lettermark: "FUZI C.",
-    tag: "Landing Panels (L.O.P.)",
-    location: "Regional Projects"
-  },
-  {
+    id: "metro",
     name: "Metro Elevators Co. Pvt. Ltd.",
-    lettermark: "METRO",
-    tag: "Standard C.O.P. Columns",
-    location: "Urban Infrastructure"
+    url: "https://www.metroelevators.co.in",
+    location: "Ahmedabad, Gujarat",
+    desc: "Industrial infrastructure developers offering precision engineering for gearless passenger setups, high-capacity automobile lifts, and villa solutions."
   },
   {
+    id: "philbrick",
     name: "Philbrick Elevator Solutions",
-    lettermark: "PHILBRICK",
-    tag: "OEM Assembly Partner",
-    location: "Export Markets"
+    url: "#",
+    location: "Ahmedabad, Gujarat",
+    desc: "Microprocessor component specialists focused on high-performance RISC door controllers, automatic panels, and custom car design assemblies."
   },
   {
+    id: "regal",
     name: "Regal Elevators",
-    lettermark: "REGAL",
-    tag: "PVD Gold Tactile Buttons",
-    location: "Luxury Residential"
+    url: "http://regalelevators.com",
+    location: "Mumbai, Maharashtra",
+    desc: "Premium boutique vertical transit engineering firm executing custom architectural glass capsules and luxury bespoke home elevators."
   },
   {
-    name: "Perfect Elevator Company",
-    lettermark: "PERFECT",
-    tag: "Custom Engineering Support",
-    location: "Commercial High-Rise"
-  },
-  {
+    id: "express",
     name: "Express Lifts Ltd.",
-    lettermark: "EXPRESS",
-    tag: "Global Compliance Systems",
-    location: "Infrastructure Projects"
+    url: "https://www.expresslifts.com",
+    location: "Ahmedabad, Gujarat",
+    desc: "A trusted global engineering exporter specializing in high-speed traction gearless elevators, automated dumbwaiters, and freight lifts."
   }
 ];
 ---
@@ -124,75 +118,231 @@ const clients = [
           Trusted by <span class="text-gold-metallic">Industry Leaders</span>
         </h1>
         <p class="text-sm sm:text-base text-brand-light/70 max-w-xl mx-auto font-light leading-relaxed">
-          Our elevator push buttons, landing panels, and car columns are integrated by leading manufacturers and infrastructural engineers globally.
+          Navkar Engineers is the partner of choice for leading infrastructure brands, elevator manufacturers, and heavy engineering groups.
         </p>
         <div class="h-1 w-16 bg-brand-gold mx-auto mt-4"></div>
       </div>
     </section>
 
-    <!-- Client Directory Section -->
-    <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Client Directory Grid -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Grid Container -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {clients.map((client) => (
-          <div class="group relative bg-brand-charcoal border border-white/5 p-8 flex flex-col justify-between transition-all duration-300 hover:border-brand-gold/45 hover:shadow-[0_12px_24px_rgba(0,0,0,0.5)] min-h-[200px]">
-            
-            <!-- Side accent bar -->
-            <div class="absolute left-0 top-0 h-0 w-[2px] bg-brand-gold group-hover:h-full transition-all duration-500"></div>
+      <!-- Layout Structure: responsive Tailwind grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {clients.map((client) => {
+          const isExternal = client.url !== "#";
+          const CardTag = isExternal ? 'a' : 'div';
+          const cardProps = isExternal 
+            ? { href: client.url, target: "_blank", rel: "noopener noreferrer", class: "group flex flex-col bg-brand-charcoal border border-white/5 p-6 transition-all duration-300 hover:border-[#C5A043] transform hover:-translate-y-1 shadow-sm hover:shadow-md cursor-pointer justify-between min-h-[420px]" }
+            : { class: "group flex flex-col bg-brand-charcoal border border-white/5 p-6 transition-all duration-300 hover:border-[#C5A043] transform hover:-translate-y-1 shadow-sm hover:shadow-md justify-between min-h-[420px]" };
+          
+          return (
+            <CardTag {...cardProps}>
+              <!-- Card Top: Logo Container -->
+              <div class="space-y-6">
+                <div class="h-28 w-full bg-white rounded-sm flex items-center justify-center p-4 shadow-inner overflow-hidden select-none border border-white/10 relative">
+                  
+                  {/* Epic Elevators Logo */}
+                  {client.id === "epic" && (
+                    <div class="flex items-center justify-center w-full h-full">
+                      <div class="w-14 h-14 bg-[#E11D48] rounded-full flex items-center justify-center shadow-md">
+                        <span class="text-white font-display font-black text-sm tracking-tighter lowercase">epic</span>
+                      </div>
+                    </div>
+                  )}
 
-            <!-- Top Row: Stylized Icon Badge & Location -->
-            <div class="flex justify-between items-start gap-4">
-              <!-- Custom Icon representing elevator shaft/core -->
-              <div class="w-12 h-12 border border-white/10 text-brand-light/40 group-hover:text-brand-gold group-hover:border-brand-gold/30 flex items-center justify-center transition-all duration-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <!-- Custom abstract geometric elevator core wireframe -->
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
+                  {/* Techno Industries Logo */}
+                  {client.id === "techno" && (
+                    <div class="flex flex-col items-center justify-center w-full h-full relative">
+                      <span class="text-black font-display font-black text-xl italic tracking-tight leading-none uppercase">TECHNO</span>
+                      <svg class="w-24 h-4 mt-0.5" viewBox="0 0 100 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 2C30 9 70 9 95 2" stroke="#FBBF24" stroke-width="3.5" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                  )}
+
+                  {/* Sigma Elevators Logo */}
+                  {client.id === "sigma" && (
+                    <div class="flex items-center gap-2 justify-center w-full h-full">
+                      <div class="relative w-11 h-11 rounded-full bg-gradient-to-tr from-[#9D174D] via-[#C91A64] to-[#F43F5E] shadow flex items-center justify-center overflow-hidden border border-[#9D174D]/45">
+                        {/* Slice shape */}
+                        <div class="absolute inset-x-2 inset-y-4 bg-white/90 rounded-full rotate-45 transform skew-x-12"></div>
+                      </div>
+                      <span class="text-[#1E293B] font-display font-black text-base tracking-wide uppercase">SIGMA</span>
+                    </div>
+                  )}
+
+                  {/* S H Elevators Logo */}
+                  {client.id === "shelevators" && (
+                    <div class="flex flex-col items-center justify-center w-full h-full gap-1">
+                      <div class="flex items-center gap-1">
+                        <div class="w-8 h-9 border-2 border-[#334155] flex items-center justify-center font-display font-black text-[11px] text-[#334155] rounded-sm bg-slate-50 relative" style="clip-path: polygon(25% 0%, 75% 0%, 100% 30%, 100% 70%, 75% 100%, 25% 100%, 0% 70%, 0% 30%);">
+                          SH
+                        </div>
+                        <span class="text-[#334155] font-display font-extrabold text-sm tracking-wider uppercase">ELEVATORS</span>
+                      </div>
+                      <span class="text-[#64748B] text-[8px] font-sans tracking-widest uppercase font-medium">Pvt. Ltd.</span>
+                    </div>
+                  )}
+
+                  {/* FUZI Classic Elevators Logo */}
+                  {client.id === "fuzi" && (
+                    <div class="flex flex-col items-center justify-center w-full h-full">
+                      <div class="flex items-center">
+                        <span class="text-[#DC2626] font-display font-black text-2xl tracking-tighter uppercase relative flex">
+                          F
+                          <span class="relative">U<span class="absolute inset-y-1.5 inset-x-0.5 bg-white w-2 h-2 flex items-center justify-center text-[7px] text-[#DC2626] font-extrabold rotate-95">▲</span></span>
+                          Z
+                          I
+                        </span>
+                      </div>
+                      <span class="text-[#64748B] text-[7px] font-sans font-bold tracking-widest uppercase mt-0.5">Classic Elevators</span>
+                    </div>
+                  )}
+
+                  {/* Hybon Elevators Logo */}
+                  {client.id === "hybon" && (
+                    <div class="flex flex-col items-center justify-center w-full h-full text-center">
+                      <span class="text-black font-display font-light text-[21px] tracking-[0.25em] uppercase leading-none pl-[0.25em]">HYBON</span>
+                      <div class="w-16 h-[0.5px] bg-black/15 my-1"></div>
+                      <span class="text-[#64748B] text-[6.5px] font-sans font-bold tracking-[0.18em] uppercase">Elevators & Escalators</span>
+                    </div>
+                  )}
+
+                  {/* Safex Industries Logo */}
+                  {client.id === "safex" && (
+                    <div class="flex items-center justify-center w-full h-full">
+                      <span class="text-[#1E3A8A] font-display font-black text-2xl tracking-tighter lowercase flex items-center">
+                        saf
+                        <span class="relative inline-block text-[#1E3A8A]">e
+                          <span class="absolute -top-1.5 -right-3 text-[#EA580C] text-lg font-black leading-none">/</span>
+                        </span>
+                        x
+                      </span>
+                    </div>
+                  )}
+
+                  {/* Beacon Elevators Logo */}
+                  {client.id === "beacon" && (
+                    <div class="flex flex-col items-center justify-center w-full h-full">
+                      <div class="flex items-center gap-1 text-[#047857]">
+                        {/* Lighthouse graphic icon integrated */}
+                        <svg class="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 2L9 8h6l-3-6zm-3 7l-2 8h10l-2-8H9zm-2.5 9.5l-1 3.5h11l-1-3.5h-9z"/>
+                        </svg>
+                        <span class="font-display font-black text-lg tracking-wider uppercase">Beacon</span>
+                      </div>
+                      <span class="text-[#DC2626] text-[7.5px] font-sans font-bold tracking-wider uppercase mt-0.5">Elevators & Escalators</span>
+                    </div>
+                  )}
+
+                  {/* Metro Elevators Logo */}
+                  {client.id === "metro" && (
+                    <div class="flex items-center justify-center w-full h-full gap-3">
+                      <!-- Blue hoistway box / red cabin vector -->
+                      <div class="w-10 h-14 border border-[#2563EB] p-1 flex items-center justify-center rounded-sm bg-slate-50">
+                        <div class="w-6 h-8 bg-[#DC2626] flex items-center justify-center rounded-sm relative">
+                          <div class="absolute inset-y-0 left-2 w-[1px] bg-white/30"></div>
+                          <span class="text-[5px] text-white font-black">▲</span>
+                        </div>
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="text-[#DC2626] font-mono font-bold text-lg tracking-tighter uppercase leading-none">METRO</span>
+                        <span class="text-[#1E293B] text-[6px] font-sans tracking-widest uppercase font-extrabold mt-0.5">Elevators Co.</span>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Philbrick Logo */}
+                  {client.id === "philbrick" && (
+                    <div class="flex items-center justify-center w-full h-full gap-1.5">
+                      <!-- Red globe icon -->
+                      <div class="relative w-8 h-8 rounded-full border-2 border-[#DC2626] flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 border border-[#DC2626]/20 rotate-45 scale-90"></div>
+                        <div class="absolute inset-0 border border-[#DC2626]/20 -rotate-45 scale-90"></div>
+                        <div class="w-[2px] h-full bg-[#DC2626]/40 absolute"></div>
+                        <div class="h-[2px] w-full bg-[#DC2626]/40 absolute"></div>
+                      </div>
+                      <span class="text-[#2563EB] font-sans font-extrabold text-base tracking-tighter lowercase">philbrick</span>
+                    </div>
+                  )}
+
+                  {/* Regal Elevators Logo */}
+                  {client.id === "regal" && (
+                    <div class="flex flex-col items-center justify-center w-full h-full text-center">
+                      <span class="text-[#1E3A8A] font-serif font-bold text-xl tracking-wider uppercase leading-none">REGAL</span>
+                      <div class="text-[#EA580C] text-xs font-black tracking-widest mt-0.5 leading-none">▲▲▲</div>
+                    </div>
+                  )}
+
+                  {/* Express Lifts Logo */}
+                  {client.id === "express" && (
+                    <div class="flex items-center justify-center w-full h-full gap-2">
+                      <div class="w-10 h-10 bg-[#475569] flex items-center justify-center rounded-sm p-1">
+                        <div class="flex flex-col items-center text-[8px] font-black text-white leading-none">
+                          <span class="text-[#3B82F6]">▲</span>
+                          <div class="w-7 h-[1px] bg-white/30 my-0.5"></div>
+                          <span class="text-[#EF4444]">▼</span>
+                        </div>
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="text-black font-display font-black text-xs tracking-wider uppercase">EXPRESS</span>
+                        <span class="text-[#475569] text-[7px] font-sans tracking-wider uppercase font-bold">Lifts Ltd.</span>
+                      </div>
+                    </div>
+                  )}
+
+                </div>
+
+                <!-- Card Info: Description -->
+                <div class="space-y-4 text-left">
+                  <h3 class="font-display font-bold text-base text-white tracking-wide group-hover:text-brand-gold transition-colors duration-300">
+                    {client.name}
+                  </h3>
+                  <p class="text-xs text-brand-light/65 leading-relaxed font-light font-sans h-20 overflow-hidden line-clamp-4">
+                    {client.desc}
+                  </p>
+                </div>
               </div>
-              <span class="text-[9px] font-mono text-brand-light/35 uppercase tracking-widest bg-brand-dark px-2.5 py-1 border border-white/5">
-                {client.location}
-              </span>
-            </div>
 
-            <!-- Middle Row: Client Title & Lettermark -->
-            <div class="pt-6 space-y-2">
-              <div class="flex items-baseline gap-2">
-                <span class="text-xs font-display font-extrabold text-brand-gold/70 group-hover:text-brand-gold transition-colors duration-300">{client.lettermark}</span>
-                <span class="h-1 w-1 rounded-full bg-white/20"></span>
+              <!-- Card Bottom: Location Badge & Visit Link -->
+              <div class="pt-6 border-t border-white/5 mt-6 space-y-4">
+                <!-- Location Badge -->
+                <div class="flex items-center gap-2 text-[10px] text-brand-light/50 uppercase tracking-widest font-semibold text-left">
+                  <!-- Minimal Map-Pin SVG -->
+                  <svg class="w-3.5 h-3.5 text-brand-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                  <span>{client.location}</span>
+                </div>
+
+                <!-- External Web link indicator -->
+                {isExternal && (
+                  <div class="flex items-center justify-between text-[10px] text-brand-gold font-display font-bold uppercase tracking-wider group-hover:text-brand-gold-light transition-colors">
+                    <span>Visit Website</span>
+                    <span class="chevron-icon transform group-hover:translate-x-1 transition-transform duration-300">&gt;&gt;</span>
+                  </div>
+                )}
               </div>
-              <h3 class="font-display font-bold text-lg text-white leading-tight">
-                {client.name}
-              </h3>
-            </div>
-
-            <!-- Bottom Row: Tagline description -->
-            <div class="pt-4 border-t border-white/5 mt-4 flex items-center justify-between">
-              <span class="text-[10px] text-brand-light/50 font-light tracking-wide italic">
-                {client.tag}
-              </span>
-              <span class="text-brand-gold/40 group-hover:text-brand-gold font-display font-bold text-xs tracking-tighter transition-colors">
-                &gt;&gt;
-              </span>
-            </div>
-
-          </div>
-        ))}
+            </CardTag>
+          );
+        })}
       </div>
 
     </section>
 
-    <!-- Partnerships / Distributor CTA Section -->
+    <!-- Partnerships CTA Section -->
     <section class="py-20 bg-brand-charcoal overflow-hidden border-t border-white/5 relative bg-grid-pattern">
       <div class="absolute bottom-0 left-10 w-[400px] h-[400px] bg-brand-gold/3 rounded-full blur-[100px] pointer-events-none"></div>
 
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
         <h2 class="font-display font-semibold text-xs text-brand-gold uppercase tracking-widest">Global OEM Networks</h2>
         <p class="font-display font-extrabold text-3xl text-white tracking-tight leading-tight">
-          Become a Certified Navkar OEM Partner
+          Integrate Premium Navkar Components
         </p>
         <p class="text-xs sm:text-sm text-brand-light/65 leading-relaxed font-light max-w-xl mx-auto">
-          We engineer bespoke fixtures for high-end elevator manufacturers worldwide. Contact our contract sales team to integrate Navkar components directly into your engineering pipeline.
+          We manufacture high-precision push buttons, tactile panels, and custom-tailored operating cabins for leading lift brands. Partner with us today.
         </p>
         <div class="pt-4">
           <a 
