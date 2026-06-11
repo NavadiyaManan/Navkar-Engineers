@@ -1,0 +1,225 @@
+---
+// Contact.astro
+---
+<section id="contact" class="relative py-20 bg-brand-dark overflow-hidden border-t border-white/5">
+  <!-- Glowing circular accents -->
+  <div class="absolute top-1/3 left-0 w-[400px] h-[400px] bg-brand-gold/3 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+  <div class="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-brand-gold/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-16 space-y-3">
+      <h2 class="font-display font-semibold text-xs text-brand-gold uppercase tracking-widest">Connect With Us</h2>
+      <p class="font-display font-bold text-3xl sm:text-4xl text-white uppercase tracking-wider">Contact & Inquiries</p>
+      <div class="h-[1px] w-16 bg-brand-gold/60 mx-auto mt-4"></div>
+    </div>
+
+    <!-- 1. Address & Contact Details Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      
+      <!-- Card 1: Unit-1 (Head Office / Factory) -->
+      <div class="group relative bg-brand-charcoal p-8 border border-white/5 hover:border-brand-gold/30 transition-all duration-300 flex flex-col justify-between">
+        <div class="absolute top-0 left-0 w-[2px] h-0 bg-brand-gold group-hover:h-full transition-all duration-300"></div>
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="p-3 bg-brand-dark text-brand-gold border border-white/5 rounded-sm">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-[10px] text-brand-gold uppercase tracking-widest font-semibold">Manufacturing Facility</p>
+              <h3 class="font-display font-bold text-base text-white uppercase tracking-wider mt-0.5">Unit - 1</h3>
+            </div>
+          </div>
+          <p class="text-xs text-brand-light/70 font-light leading-relaxed pt-2">
+            49, Narnarayan Estate, Panna Estate Road, Nr. Soni's Chawl Cross Road, Rakhial, Ahmedabad - 380023.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] text-brand-light/40 uppercase tracking-wider font-medium">
+          <span>Head Office</span>
+          <span class="text-brand-gold">&gt;&gt;</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Unit-2 (Additional Plant) -->
+      <div class="group relative bg-brand-charcoal p-8 border border-white/5 hover:border-brand-gold/30 transition-all duration-300 flex flex-col justify-between">
+        <div class="absolute top-0 left-0 w-[2px] h-0 bg-brand-gold group-hover:h-full transition-all duration-300"></div>
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="p-3 bg-brand-dark text-brand-gold border border-white/5 rounded-sm">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-[10px] text-brand-gold uppercase tracking-widest font-semibold">Expansion Plant</p>
+              <h3 class="font-display font-bold text-base text-white uppercase tracking-wider mt-0.5">Unit - 2</h3>
+            </div>
+          </div>
+          <p class="text-xs text-brand-light/70 font-light leading-relaxed pt-2">
+            26, KP Industries Estate, Sadhi Mata Temple, Bakrol to Gatrad Road, Bakrol Kujad Cross Road, Ahmedabad Indore Highway, Bakrol.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] text-brand-light/40 uppercase tracking-wider font-medium">
+          <span>Factory Outlet</span>
+          <span class="text-brand-gold">&gt;&gt;</span>
+        </div>
+      </div>
+
+      <!-- Card 3: Contact Channels (Phones & Email) -->
+      <div class="group relative bg-brand-charcoal p-8 border border-white/5 hover:border-brand-gold/30 transition-all duration-300 flex flex-col justify-between">
+        <div class="absolute top-0 left-0 w-[2px] h-0 bg-brand-gold group-hover:h-full transition-all duration-300"></div>
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="p-3 bg-brand-dark text-brand-gold border border-white/5 rounded-sm">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-[10px] text-brand-gold uppercase tracking-widest font-semibold">Immediate Assistance</p>
+              <h3 class="font-display font-bold text-base text-white uppercase tracking-wider mt-0.5">Direct Channels</h3>
+            </div>
+          </div>
+          <div class="space-y-3 pt-2">
+            <div class="flex flex-col">
+              <span class="text-[10px] text-brand-light/40 uppercase tracking-widest">Phone Support</span>
+              <a href="tel:+91918866141914" class="text-xs text-white hover:text-brand-gold transition-colors font-medium">+91 918866141914 <span class="text-[10px] text-brand-light/40 font-light font-sans">(Ashvin N.)</span></a>
+              <a href="tel:+917383881211" class="text-xs text-white hover:text-brand-gold transition-colors font-medium mt-1">+91 7383881211 <span class="text-[10px] text-brand-light/40 font-light font-sans">(Kuldip N.)</span></a>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[10px] text-brand-light/40 uppercase tracking-widest">General Email</span>
+              <a href="mailto:navkareng@gmail.com" class="text-xs text-white hover:text-brand-gold transition-colors font-medium">navkareng@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[10px] text-brand-light/40 uppercase tracking-wider font-medium">
+          <span>Global Sales Support</span>
+          <span class="text-brand-gold">&gt;&gt;</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 2. Maps & RFQ Form Split Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+      
+      <!-- Google Maps Embed Container -->
+      <div class="lg:col-span-5 flex flex-col">
+        <div class="relative w-full flex-grow min-h-[300px] lg:min-h-0 rounded-lg overflow-hidden border border-white/5 shadow-2xl bg-brand-charcoal">
+          <!-- Grayscale to Color Interactive Google Map -->
+          <iframe 
+            src="https://maps.google.com/maps?q=49,%20Narnarayan%20Estate,%20Panna%20Estate%20Road,%20Rakhial,%20Ahmedabad&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            class="w-full h-full min-h-[350px] border-0 filter grayscale contrast-125 brightness-90 hover:grayscale-0 hover:contrast-100 hover:brightness-100 transition-all duration-500 ease-out"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Navkar Engineers Rakhial Factory Map"
+          ></iframe>
+          
+          <!-- Bottom Floating Map Badge -->
+          <div class="absolute bottom-4 left-4 right-4 bg-brand-charcoal/95 border border-brand-gold/30 px-4 py-3 backdrop-blur-md flex items-center justify-between pointer-events-none select-none">
+            <div>
+              <p class="font-display font-bold text-[10px] uppercase text-white tracking-wider">Unit-1 Factory Coordinates</p>
+              <p class="font-sans font-light text-[9px] text-brand-gold uppercase tracking-widest mt-0.5">Rakhial, Ahmedabad, India</p>
+            </div>
+            <div class="text-brand-gold text-xs font-mono font-semibold">
+              MAP
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RFQ Contact Form -->
+      <div class="lg:col-span-7 bg-brand-charcoal p-8 border border-white/5 relative flex flex-col justify-between">
+        <div class="absolute -top-[1px] right-8 w-12 h-[2px] bg-brand-gold"></div>
+        
+        <div class="mb-6">
+          <h3 class="font-display font-extrabold text-xl text-white tracking-wider uppercase mb-1">
+            Request Technical Drawing / Quote
+          </h3>
+          <p class="text-xs text-brand-light/60 font-light">
+            Fill in your layout specifications or component quantities. Our technical desk responds within 24 hours.
+          </p>
+        </div>
+
+        <form class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-[10px] text-brand-light/40 uppercase tracking-wider font-semibold mb-2">Your Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required
+                class="w-full bg-brand-dark/95 border border-white/10 px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors"
+                placeholder="John Doe"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-[10px] text-brand-light/40 uppercase tracking-wider font-semibold mb-2">Business Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+                class="w-full bg-brand-dark/95 border border-white/10 px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors"
+                placeholder="j.doe@company.com"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="company" class="block text-[10px] text-brand-light/40 uppercase tracking-wider font-semibold mb-2">Company Name</label>
+              <input 
+                type="text" 
+                id="company" 
+                name="company" 
+                class="w-full bg-brand-dark/95 border border-white/10 px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors"
+                placeholder="Global Elevators Corp"
+              />
+            </div>
+            <div>
+              <label for="product-category" class="block text-[10px] text-brand-light/40 uppercase tracking-wider font-semibold mb-2">Required Component</label>
+              <select 
+                id="product-category" 
+                name="product-category" 
+                class="w-full bg-brand-dark/95 border border-white/10 px-4 py-3 text-sm text-brand-light/60 focus:outline-none focus:border-brand-gold transition-colors"
+              >
+                <option value="push-buttons">Elevator Push Buttons</option>
+                <option value="lop">Landing Operating Panels (L.O.P.)</option>
+                <option value="cop">Car Operating Panels (C.O.P.)</option>
+                <option value="custom">Bespoke Custom Engineering</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="message" class="block text-[10px] text-brand-light/40 uppercase tracking-wider font-semibold mb-2">Technical Requirements / Scope</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="4" 
+              required
+              class="w-full bg-brand-dark/95 border border-white/10 px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors resize-none font-sans"
+              placeholder="Please describe dimensions, materials (e.g. PVD gold, hair-line stainless steel), standards, or order quantities..."
+            ></textarea>
+          </div>
+
+          <button 
+            type="submit" 
+            class="w-full btn-chevron-hover inline-flex items-center justify-center py-4 bg-gold-metallic text-brand-dark font-display font-bold text-xs tracking-widest uppercase transition-transform hover:-translate-y-0.5 focus:outline-none"
+          >
+            <span>Submit Technical Request</span>
+            <span class="chevron-icon ml-2 text-sm font-bold">&gt;&gt;</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section>

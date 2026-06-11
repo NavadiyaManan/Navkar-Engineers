@@ -1,0 +1,213 @@
+---
+// client.astro
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const clients = [
+  {
+    name: "Epic Elevators",
+    lettermark: "EPIC",
+    tag: "Tactile Button Partner",
+    location: "National Developer"
+  },
+  {
+    name: "Techno Industries Pvt Ltd",
+    lettermark: "TECHNO",
+    tag: "Custom Operating Panels",
+    location: "Gujarat, India"
+  },
+  {
+    name: "Sigma Elevators",
+    lettermark: "SIGMA",
+    tag: "High-Rise Interfaces",
+    location: "Mumbai, India"
+  },
+  {
+    name: "S.H. Elevators Pvt Ltd",
+    lettermark: "S.H.",
+    tag: "OEM Component Supply",
+    location: "New Delhi, India"
+  },
+  {
+    name: "Fuzi Elevators",
+    lettermark: "FUZI",
+    tag: "Panel Assembly Network",
+    location: "International Partner"
+  },
+  {
+    name: "Hybon Elevators & Escalators",
+    lettermark: "HYBON",
+    tag: "Premium Fixtures Deployment",
+    location: "North India Hub"
+  },
+  {
+    name: "Safex Industries Limited",
+    lettermark: "SAFEX",
+    tag: "Heavy-Duty Tactile Panels",
+    location: "Industrial Infrastructure"
+  },
+  {
+    name: "CIE Elevators",
+    lettermark: "CIE",
+    tag: "Custom Glass COP Panels",
+    location: "South India Network"
+  },
+  {
+    name: "Beacon Elevators",
+    lettermark: "BEACON",
+    tag: "Tactile Button Deployment",
+    location: "Metro Transit Projects"
+  },
+  {
+    name: "Fuzi Classic Elevators",
+    lettermark: "FUZI C.",
+    tag: "Landing Panels (L.O.P.)",
+    location: "Regional Projects"
+  },
+  {
+    name: "Metro Elevators Co. Pvt. Ltd.",
+    lettermark: "METRO",
+    tag: "Standard C.O.P. Columns",
+    location: "Urban Infrastructure"
+  },
+  {
+    name: "Philbrick Elevator Solutions",
+    lettermark: "PHILBRICK",
+    tag: "OEM Assembly Partner",
+    location: "Export Markets"
+  },
+  {
+    name: "Regal Elevators",
+    lettermark: "REGAL",
+    tag: "PVD Gold Tactile Buttons",
+    location: "Luxury Residential"
+  },
+  {
+    name: "Perfect Elevator Company",
+    lettermark: "PERFECT",
+    tag: "Custom Engineering Support",
+    location: "Commercial High-Rise"
+  },
+  {
+    name: "Express Lifts Ltd.",
+    lettermark: "EXPRESS",
+    tag: "Global Compliance Systems",
+    location: "Infrastructure Projects"
+  }
+];
+---
+
+<Layout 
+  title="Our Clients | Navkar Engineers - B2B Elevator Partnerships" 
+  description="Explore Navkar Engineers' trusted B2B clients, elevator contractors, and global OEM partners utilizing our premium button systems and operating panels."
+>
+  <!-- Global Sticky Header -->
+  <Navbar />
+
+  <main class="bg-brand-dark min-h-screen">
+    
+    <!-- Hero Banner Section -->
+    <section class="relative py-20 bg-brand-charcoal border-b border-white/5 bg-grid-pattern overflow-hidden">
+      <!-- Glow effect -->
+      <div class="absolute top-1/2 left-1/2 w-[600px] h-[300px] -translate-x-1/2 -translate-y-1/2 bg-brand-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center space-y-4">
+        <!-- Breadcrumbs -->
+        <div class="flex items-center justify-center gap-2 text-[10px] text-brand-light/40 uppercase tracking-widest font-semibold">
+          <a href="/" class="hover:text-brand-gold transition-colors">Home</a>
+          <span>&gt;&gt;</span>
+          <span class="text-brand-gold">Clients</span>
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl font-display font-extrabold text-white tracking-tight leading-tight uppercase">
+          Trusted by <span class="text-gold-metallic">Industry Leaders</span>
+        </h1>
+        <p class="text-sm sm:text-base text-brand-light/70 max-w-xl mx-auto font-light leading-relaxed">
+          Our elevator push buttons, landing panels, and car columns are integrated by leading manufacturers and infrastructural engineers globally.
+        </p>
+        <div class="h-1 w-16 bg-brand-gold mx-auto mt-4"></div>
+      </div>
+    </section>
+
+    <!-- Client Directory Section -->
+    <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Grid Container -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {clients.map((client) => (
+          <div class="group relative bg-brand-charcoal border border-white/5 p-8 flex flex-col justify-between transition-all duration-300 hover:border-brand-gold/45 hover:shadow-[0_12px_24px_rgba(0,0,0,0.5)] min-h-[200px]">
+            
+            <!-- Side accent bar -->
+            <div class="absolute left-0 top-0 h-0 w-[2px] bg-brand-gold group-hover:h-full transition-all duration-500"></div>
+
+            <!-- Top Row: Stylized Icon Badge & Location -->
+            <div class="flex justify-between items-start gap-4">
+              <!-- Custom Icon representing elevator shaft/core -->
+              <div class="w-12 h-12 border border-white/10 text-brand-light/40 group-hover:text-brand-gold group-hover:border-brand-gold/30 flex items-center justify-center transition-all duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Custom abstract geometric elevator core wireframe -->
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <span class="text-[9px] font-mono text-brand-light/35 uppercase tracking-widest bg-brand-dark px-2.5 py-1 border border-white/5">
+                {client.location}
+              </span>
+            </div>
+
+            <!-- Middle Row: Client Title & Lettermark -->
+            <div class="pt-6 space-y-2">
+              <div class="flex items-baseline gap-2">
+                <span class="text-xs font-display font-extrabold text-brand-gold/70 group-hover:text-brand-gold transition-colors duration-300">{client.lettermark}</span>
+                <span class="h-1 w-1 rounded-full bg-white/20"></span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-white leading-tight">
+                {client.name}
+              </h3>
+            </div>
+
+            <!-- Bottom Row: Tagline description -->
+            <div class="pt-4 border-t border-white/5 mt-4 flex items-center justify-between">
+              <span class="text-[10px] text-brand-light/50 font-light tracking-wide italic">
+                {client.tag}
+              </span>
+              <span class="text-brand-gold/40 group-hover:text-brand-gold font-display font-bold text-xs tracking-tighter transition-colors">
+                &gt;&gt;
+              </span>
+            </div>
+
+          </div>
+        ))}
+      </div>
+
+    </section>
+
+    <!-- Partnerships / Distributor CTA Section -->
+    <section class="py-20 bg-brand-charcoal overflow-hidden border-t border-white/5 relative bg-grid-pattern">
+      <div class="absolute bottom-0 left-10 w-[400px] h-[400px] bg-brand-gold/3 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <h2 class="font-display font-semibold text-xs text-brand-gold uppercase tracking-widest">Global OEM Networks</h2>
+        <p class="font-display font-extrabold text-3xl text-white tracking-tight leading-tight">
+          Become a Certified Navkar OEM Partner
+        </p>
+        <p class="text-xs sm:text-sm text-brand-light/65 leading-relaxed font-light max-w-xl mx-auto">
+          We engineer bespoke fixtures for high-end elevator manufacturers worldwide. Contact our contract sales team to integrate Navkar components directly into your engineering pipeline.
+        </p>
+        <div class="pt-4">
+          <a 
+            href="/#contact" 
+            class="btn-chevron-hover inline-flex items-center justify-center px-8 py-4 bg-gold-metallic text-brand-dark font-display font-bold text-xs tracking-widest uppercase transition-transform hover:-translate-y-0.5 focus:outline-none"
+          >
+            <span>Inquire About Partnership</span>
+            <span class="chevron-icon ml-2 text-sm font-bold">&gt;&gt;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <Footer />
+</Layout>
